@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,h2,h3,h4, nav{
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: linear-gradient(0deg,rgba(29, 22, 130, 1) 29%, rgba(253, 187, 45, 1) 100%);
+}
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #8C6F1E 25%,
+    #CFAF4B 40%,
+    #F2D479 50%,
+    #CFAF4B 60%,
+    #8C6F1E 75%
+  );
+  background-size: 200% auto;
+  animation: goldShimmer 4s linear infinite;
+}
+
+@keyframes goldShimmer {
+  to {
+    background-position: 200% center;
+  }
+}
