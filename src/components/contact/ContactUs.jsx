@@ -1,61 +1,105 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, User, PenLine } from "lucide-react";
-
-import contactBg from "../../assets/c1.jpg"; // apni image ka path
+import { Phone, Mail, MapPin } from "lucide-react";
+import Divider from "../home/Divider";
+import contactBg from "../../assets/c1.jpg";
 
 export default function ContactUs() {
+  const [service, setService] = useState("");
+  const [event, setEvent] = useState("");
+  // 🔥 STATE
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  // 🔥 SUBMIT FUNCTION
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name,
+      email,
+      phone,
+      service,
+      event,
+      message,
+    };
+    try {
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      await res.json();
+
+      alert("Message Sent Successfully ✅");
+
+      setName("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } catch (error) {
+      console.log(error);
+      alert("Error sending message ❌");
+    }
+  };
+
   return (
     <>
+      {/* HERO */}
       <section
-        className="relative w-full h-[600px] mb-5 flex items-center justify-center overflow-hidden"
+        className="relative w-full h-[260px] sm:h-[320px] md:h-[420px] flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `url(${contactBg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        {/* Animated Text */}
         <motion.h1
-          initial={{ opacity: 0, y: 80 }}
+          initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="relative text-white text-8xl font-semibold tracking-wide"
+          transition={{ duration: 0.8 }}
+          className="relative text-white text-2xl sm:text-3xl md:text-5xl font-semibold tracking-wide"
         >
           Contact Us
         </motion.h1>
       </section>
 
-      <section className="bg-[#0B1D3A] py-24 px-6 mb-5">
-        <div className="max-w-8xl mx-auto grid md:grid-cols-2 gap-10">
+      <Divider />
+
+      {/* CONTACT SECTION */}
+      <section className="bg-[#0B1D3A] py-16 sm:py-20 px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
           {/* LEFT SIDE */}
           <motion.div
-            initial={{ opacity: 0, x: -80 }}
+            initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-white rounded-[30px] px-13 py-20 shadow-lg"
+            className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg"
           >
-            <h2 className="text-6xl font-bold text-[#1f2c3a] mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#1f2c3a] mb-4">
               Get in touch with us
             </h2>
 
-            <p className="text-black/60 text-lg mb-10">
-              We are here to help reach out anytime for questions, bookings, or
-              collaborations.
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
+              We are here to help...
             </p>
 
             {/* Phone */}
-            <div className="flex items-start gap-6 py-8 border-b">
-              <div className="bg-[#CFAF4B] w-30 h-30 rounded-2xl flex items-center justify-center text-white">
-                <Phone size={42} />
+            <div className="flex items-start gap-4 py-6 border-b">
+              <div className="gold-shimmer w-12 h-12 rounded-xl flex items-center justify-center text-white shadow">
+                <Phone size={20} />
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-2">Phone Number</h3>
-                <p className="text-gray-600 text-lg">
+                <h3 className="font-semibold">Phone Number</h3>
+                <p className="text-gray-600 text-sm">
                   +91-8921962830 <br />
                   +91-9539374410
                 </p>
@@ -63,116 +107,152 @@ export default function ContactUs() {
             </div>
 
             {/* Email */}
-            <div className="flex items-start gap-6 py-8 border-b">
-              <div className="bg-[#CFAF4B] w-30 h-30 rounded-2xl flex items-center justify-center text-white">
-                <Mail size={42} />
+            <div className="flex items-start gap-4 py-6 border-b">
+              <div className="gold-shimmer w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                <Mail size={20} />
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-2">Email</h3>
-                <p className="text-gray-600 text-lg">
+                <h3 className="font-semibold">Email</h3>
+                <p className="text-gray-600 text-sm">
                   infograndauraofficial@gmail.com
                 </p>
               </div>
             </div>
 
             {/* Address */}
-            <div className="flex items-start gap-6 pt-8">
-              <div className="bg-[#CFAF4B] w-30 h-30 rounded-2xl flex items-center justify-center text-white">
-                <MapPin size={42} />
+            <div className="flex items-start gap-4 pt-6">
+              <div className="gold-shimmer w-12 h-12 rounded-xl flex items-center justify-center text-white">
+                <MapPin size={20} />
               </div>
 
               <div>
-                <h3 className="text-2xl font-semibold mb-2">Address</h3>
-                <p className="text-gray-600 text-lg">
-                  HMF5+947 Payanumal, <br />
-                  Mandarathur, <br />
+                <h3 className="font-semibold">Address</h3>
+                <p className="text-gray-600 text-sm">
+                  Payanumal, Mandarathur <br />
                   Kerala 673541
                 </p>
               </div>
             </div>
           </motion.div>
 
-          {/* RIGHT SIDE FORM */}
+          {/* RIGHT FORM */}
           <motion.div
-            initial={{ opacity: 0, x: 80 }}
+            initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="bg-white rounded-[30px] px-13 py-20 shadow-lg"
+            className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-10 shadow-lg"
           >
-            <h2 className="text-6xl font-semibold text-[#1f2c3a] mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#1f2c3a] mb-4">
               Leave a Message
             </h2>
 
-            <p className="text-black/60 mb-10">We are Ready To Help You</p>
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
+              We are ready to help you.
+            </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="bg-gray-100 rounded-full px-8 py-6 outline-none focus:ring-2 focus:ring-[#CFAF4B]"
-              />
+            {/* 🔥 FORM */}
+            <form onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="bg-gray-100 rounded-full px-4 py-3 outline-none focus:ring-2 focus:ring-[#CFAF4B]"
+                  required
+                />
 
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="bg-gray-100 rounded-full px-8 py-8 outline-none focus:ring-2 focus:ring-[#CFAF4B]"
-              />
-            </div>
+                <input
+                  type="text"
+                  placeholder="Phone No."
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="bg-gray-100 rounded-full px-4 py-3 outline-none focus:ring-2 focus:ring-[#CFAF4B]"
+                  required
+                />
+              </div>
 
-            <input
-              type="text"
-              placeholder="Subject"
-              className="bg-gray-100 rounded-full px-8 py-6 mt-6 w-full outline-none focus:ring-2 focus:ring-[#CFAF4B]"
-            />
+              <div className="mt-4">
+                <input
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full bg-gray-100 rounded-full px-4 py-3 outline-none focus:ring-2 focus:ring-[#CFAF4B]"
+                  required
+                />
+              </div>
 
-            <textarea
-              placeholder="Type Your Message"
-              rows="5"
-              className="bg-gray-100 rounded-2xl px-6 py-4 mt-6 w-full outline-none focus:ring-2 focus:ring-[#0f5a5d]"
-            ></textarea>
+              {/* 🔥 SERVICE + EVENT DROPDOWN */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                {/* SERVICE */}
+                <select
+                  value={service}
+                  onChange={(e) => setService(e.target.value)}
+                  className="bg-gray-100 text-gray-600 rounded-full px-4 py-3 outline-none focus:ring-2 focus:ring-[#CFAF4B]"
+                  required
+                >
+                  <option value="">Select Service</option>
+                  <option value="Wedding Planning">Wedding Planning</option>
+                  <option value="Birthday Events">Birthday Events</option>
+                  <option value="Corporate Events">Corporate Events</option>
+                  <option value="Decoration">Decoration</option>
+                  <option value="Photography">Photography</option>
+                </select>
 
-            <button className="mt-8 bg-[#CFAF4B] text-white px-10 py-7 rounded-full text-lg hover:scale-105 transition">
-              Submit Message →
-            </button>
+                {/* EVENT */}
+                <select
+                  value={event}
+                  onChange={(e) => setEvent(e.target.value)}
+                  className="bg-gray-100 text-gray-600 rounded-full px-4 py-3 outline-none focus:ring-2 focus:ring-[#CFAF4B]"
+                  required
+                >
+                  <option value="">Select Event</option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Engagement">Engagement</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Corporate">Corporate</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              {/* MESSAGE */}
+              <textarea
+                placeholder="Type Your Message"
+                rows="4"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className="bg-gray-100 rounded-xl px-4 py-3 mt-4 w-full outline-none focus:ring-2 focus:ring-[#CFAF4B]"
+                required
+              ></textarea>
+
+              <button
+                type="submit"
+                className="mt-6 gold-shimmer-btn text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition"
+              >
+                Submit Message →
+              </button>
+            </form>
           </motion.div>
         </div>
       </section>
 
-        <section
-       className="bg-[#0B1D3A] py-20 px-8 mb-5">
+      <Divider />
 
-      <motion.div
-        initial={{ opacity: 0, y: 80 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
-        whileHover={{ scale: 1.02 }}
-        className="max-w-8xl mx-auto bg-white rounded-3xl shadow-2xl p-10"
-      >
-        
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="overflow-hidden rounded-2xl"
-        >
-
+      {/* MAP */}
+      <section className="bg-[#0B1D3A] py-10 sm:py-16 px-4 sm:px-6">
+        <motion.div className="max-w-7xl mx-auto rounded-xl overflow-hidden shadow-xl">
           <iframe
-            src="https://www.google.com/maps?q=Payanummal%20Kerala&output=embed"
-            width="100%"
-            height="550"
-            style={{ border: 0 }}
-            allowFullScreen=""
+            src="https://www.google.com/maps?q=Payanummal,Kerala&z=15&output=embed"
+            className="w-full h-[300px]"
             loading="lazy"
-            className="w-full h-[550px]"
-          ></iframe>
-
+            style={{ border: 0 }}
+          />
         </motion.div>
+      </section>
 
-      </motion.div>
-
-    </section>
+      <Divider />
     </>
   );
 }
