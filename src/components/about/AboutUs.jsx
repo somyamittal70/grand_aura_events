@@ -4,12 +4,20 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Divider from "../../components/home/Divider";
 
+<<<<<<< HEAD
 import a1 from "../../assets/a1.jpg";
 import aboutus1 from "../../assets/better.jpg";
 import aboutus2 from "../../assets/together.jpg";
 import img1 from "../../assets/band.png";
 import img2 from "../../assets/comedy.png";
 import img3 from "../../assets/livedj.png";
+=======
+import a1 from "../../assets/aboutus.jpeg";
+import aboutus1 from "../../assets/a1.jpeg";
+import img2 from "../../assets/sign1.jpeg";
+import img1 from "../../assets/sign2.jpeg";
+import img3 from "../../assets/sign3.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function AboutUs() {
   return (
@@ -28,6 +36,7 @@ export default function AboutUs() {
       <Divider />
 
       {/* ABOUT SECTION */}
+<<<<<<< HEAD
       <section className="bg-[#0B1D3A] py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center mb-20">
           {/* LEFT IMAGES */}
@@ -90,12 +99,123 @@ export default function AboutUs() {
 
               <span className="absolute inset-0 gold-shimmer-btn opacity-0 group-hover/btn:opacity-100 transition"></span>
             </Link>
+=======
+      <section className="bg-[#0B1D3A] py-20 md:py-28 px-4 sm:px-6 md:px-12 overflow-hidden">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-14 md:gap-20">
+          {/* ================= LEFT EDITORIAL IMAGE DESIGN ================= */}
+          <div className="flex justify-center md:justify-start">
+            <motion.div
+              initial={{ opacity: 0, y: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.8,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="relative"
+            >
+              {/* GOLD SHIMMER FRAME */}
+              <div className="gold-shimmer p-[3px] rounded-[30px]">
+                {/* IMAGE CONTAINER */}
+                <div className="relative overflow-hidden rounded-[28px] bg-[#0B1D3A]">
+                  <motion.img
+                    src={aboutus1}
+                    alt="event"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="
+                  w-[300px] sm:w-[360px] md:w-[420px]
+                  h-[420px] sm:h-[480px] md:h-[520px]
+                  object-cover
+                  hover:shadow-[0_30px_80px_rgba(212,175,55,0.35)]
+                "
+                  />
+
+                  {/* Luxury Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* ================= RIGHT CONTENT ================= */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="max-w-xl md:max-w-2xl text-center md:text-left mx-auto md:mx-0"
+          >
+            <p className="gold-shimmer-text font-semibold text-sm sm:text-base md:text-lg mb-3 tracking-wide">
+              About Us
+            </p>
+
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight mb-6">
+              Professional Planning,
+              <span className="block gold-shimmer-text">Grand Execution</span>
+            </h2>
+
+            <p className="text-sm sm:text-base text-white/80 leading-7 mb-6">
+              At GrandAura Events, we believe every celebration deserves
+              elegance and perfection. From intimate gatherings to large-scale
+              corporate functions, we craft seamless and unforgettable
+              experiences with creativity and precision.
+            </p>
+
+            <p className="text-sm sm:text-base text-white/80 leading-7 mb-10">
+              Our expert team blends event design, logistics, and hospitality to
+              deliver flawless execution and exceptional service that leaves a
+              lasting impression.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* MISSION / VISION */}
+      <section className="bg-[#0B1D3A] py-20 sm:py-28 md:py-40 px-4 sm:px-6 md:px-10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12 sm:mb-16 md:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-white mb-4">
+              Our <span className="gold-shimmer-text"> Core Values </span>
+            </h2>
+
+            <p className="text-gray-400 max-w-xl sm:max-w-2xl mx-auto text-sm sm:text-base">
+              The principles that define our approach...
+            </p>
+          </div>
+
+          <div className="gold-shimmer-line mb-10 sm:mb-16"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 text-white">
+            {[...Array(3)].map((_, i) => (
+              <motion.div
+                key={i}
+                className={`relative ${i !== 2 ? "gold-border md:pr-10" : ""}`}
+              >
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6">
+                  {["Mission", "Vision", "Teamwork"][i]}
+                </h2>
+
+                <p className="text-sm sm:text-base md:text-lg leading-6 sm:leading-8">
+                  {
+                    [
+                      "To deliver unforgettable events...",
+                      "To be recognized as a leading name...",
+                      "At GrandAura Events, teamwork is our strength...",
+                    ][i]
+                  }
+                </p>
+              </motion.div>
+            ))}
+>>>>>>> fe4c9d8 (Updated project)
           </div>
         </div>
       </section>
 
       <Divider />
 
+<<<<<<< HEAD
       {/* MISSION / VISION */}
       <section className="bg-[#0B1D3A] py-20 sm:py-28 md:py-40 px-4 sm:px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
@@ -138,6 +258,8 @@ export default function AboutUs() {
 
       <Divider />
 
+=======
+>>>>>>> fe4c9d8 (Updated project)
       {/* WHY CHOOSE US */}
       <section className="bg-[#09172E] py-20 sm:py-24 md:py-32 px-4 sm:px-6 md:px-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(207,175,75,0.1),transparent_70%)]"></div>
@@ -159,7 +281,11 @@ export default function AboutUs() {
                 key={i}
                 className="group relative p-6 sm:p-8 md:p-10 rounded-[20px] md:rounded-[25px] border border-[#CFAF4B33] bg-[#0f2a52]"
               >
+<<<<<<< HEAD
                 <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
+=======
+                <h3 className="gold-shimmer-text text-lg sm:text-xl md:text-2xl font-semibold mb-4">
+>>>>>>> fe4c9d8 (Updated project)
                   {
                     [
                       "Luxury Experience",

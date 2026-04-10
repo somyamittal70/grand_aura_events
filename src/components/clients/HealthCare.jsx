@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ClientPage from "./ClientPage";
 import Divider from "../home/Divider";
+<<<<<<< HEAD
 import img from "../../assets/comedy.png";
 import img1 from "../../assets/band.png";
 import img2 from "../../assets/band.png";
@@ -11,6 +12,16 @@ import img4 from "../../assets/band.png";
 import img5 from "../../assets/band.png";
 import img6 from "../../assets/band.png";
 import aboutImg from "../../assets/a1.jpg";
+=======
+import img from "../../assets/health.jpeg";
+import img1 from "../../assets/health.jpeg";
+import img2 from "../../assets/health.jpeg";
+import img3 from "../../assets/health.jpeg";
+import img4 from "../../assets/health.jpeg";
+import img5 from "../../assets/health.jpeg";
+import img6 from "../../assets/health.jpeg";
+import aboutImg from "../../assets/a1.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function HealthCare() {
   return (

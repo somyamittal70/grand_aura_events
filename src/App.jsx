@@ -17,6 +17,7 @@ import Reward from "./components/services/Reward";
 import TechIntegration from "./components/services/TechIntegration";
 import ContactUs from "./components/contact/ContactUs";
 import EventPage from "./components/events/EventPage";
+import UpcomingEvents from "./components/events/UpcomingEvents";
 import Conferences from "./components/events/Conferences";
 import Exhibitions from "./components/events/Exhibitions";
 import GalaDinners from "./components/events/GalaDinners";
@@ -38,6 +39,11 @@ import ManageEvents from "./components/admin/ManageEvents";
 import AdminRoute from "./components/admin/AdminRoute";
 import ContactLeads from "./components/admin/ContactLeads";
 import AllPhotos from "./components/gallery/AllPhotos";
+<<<<<<< HEAD
+=======
+import GalleryAdmin from "./components/admin/GalleryAdmin";
+import BannerManagement from "./components/admin/BannerManagement";
+>>>>>>> fe4c9d8 (Updated project)
 
 function App() {
   const location = useLocation();
@@ -66,6 +72,7 @@ function App() {
         <Route path="/services/rewards" element={<Reward />} />
         <Route path="/services/techintegration" element={<TechIntegration />} />
         <Route path="/events" element={<EventPage />} />
+        <Route path="/events/upcoming" element={<UpcomingEvents />} />
         <Route path="/events/conferences" element={<Conferences />} />
         <Route path="/events/exhibitions" element={<Exhibitions />} />
         <Route path="/events/gala-dinners" element={<GalaDinners />} />
@@ -113,8 +120,25 @@ function App() {
             </AdminRoute>
           }
         />
+<<<<<<< HEAD
       </Routes>
 
+=======
+
+        <Route
+          path="/admin/gallery"
+          element={
+            <AdminRoute>
+              <GalleryAdmin/>
+            </AdminRoute>
+          }
+        />
+        <Route path="/admin/banners" element={<BannerManagement />} />
+      </Routes>
+
+
+
+>>>>>>> fe4c9d8 (Updated project)
       {!isAdminRoute && <Footer />}
     </>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import EventPage from "./EventPage";
+<<<<<<< HEAD
 import img from "../../assets/GalaDinner.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -10,6 +11,18 @@ import img3 from "../../assets/livedj.png";
 import img4 from "../../assets/livedj.png";
 import img5 from "../../assets/livedj.png";
 import img6 from "../../assets/livedj.png";
+=======
+import gala from "../../assets/gala.jpeg";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Divider from "../home/Divider";
+import img1 from "../../assets/din1.webp";
+import img2 from "../../assets/din2.webp";
+import img3 from "../../assets/din3.webp";
+import img4 from "../../assets/din4.webp";
+import img5 from "../../assets/din5.webp";
+import img6 from "../../assets/din6.webp";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function GalaDinners() {
   const description = `
@@ -19,7 +32,11 @@ At GrandAura, we craft luxurious gala dinners that blend elegance, fine dining, 
   return (
     <div className="bg-[#0B1D3A] text-white">
       {/* 🔥 MAIN */}
+<<<<<<< HEAD
       <EventPage title="Gala Dinners" img={img} description={description} />
+=======
+      <EventPage title="Gala Dinners" img={gala} description={description} />
+>>>>>>> fe4c9d8 (Updated project)
 
       {/* 💎 KEY HIGHLIGHTS */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">

@@ -1,5 +1,6 @@
 import React from "react";
 import EventPage from "./EventPage";
+<<<<<<< HEAD
 import img from "../../assets/GalaDinner.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -10,6 +11,18 @@ import img3 from "../../assets/livedj.png";
 import img4 from "../../assets/livedj.png";
 import img5 from "../../assets/livedj.png";
 import img6 from "../../assets/livedj.png";
+=======
+import transport from "../../assets/transport1.jpeg";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Divider from "../home/Divider";
+import img1 from "../../assets/tra1.webp";
+import img2 from "../../assets/tra2.webp";
+import img3 from "../../assets/tra3.webp";
+import img4 from "../../assets/tra4.webp";
+import img5 from "../../assets/tra5.webp";
+import img6 from "../../assets/tra6.webp";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function Accommodation() {
   const description = `
@@ -21,7 +34,11 @@ At GrandAura, we provide seamless accommodation and transport solutions to ensur
       {/* 🔥 MAIN */}
       <EventPage
         title="Accommodation & Transport"
+<<<<<<< HEAD
         img={img}
+=======
+        img={transport}
+>>>>>>> fe4c9d8 (Updated project)
         description={description}
       />
 

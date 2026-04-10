@@ -1,15 +1,15 @@
 import React from "react";
 import EventPage from "./EventPage";
-import img from "../../assets/GalaDinner.jpeg";
+import exhibition from "../../assets/exhibition.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Divider from "../home/Divider";
-import img1 from "../../assets/livedj.png";
-import img2 from "../../assets/livedj.png";
-import img3 from "../../assets/livedj.png";
-import img4 from "../../assets/livedj.png";
-import img5 from "../../assets/livedj.png";
-import img6 from "../../assets/livedj.png";
+import img1 from "../../assets/exhi1.webp";
+import img2 from "../../assets/exhi2.webp";
+import img3 from "../../assets/exhi3.webp";
+import img4 from "../../assets/exhi4.webp";
+import img5 from "../../assets/exhi5.webp";
+import img6 from "../../assets/exhi6.webp";
 
 export default function Exhibitions() {
   const description = `
@@ -18,8 +18,8 @@ At GrandAura, we design and manage impactful exhibitions that showcase your bran
 
   return (
     <div className="bg-[#0B1D3A] text-white">
-      {/* 🔥 MAIN EVENT PAGE */}
-      <EventPage title="Exhibitions" img={img} description={description} />
+{/* 🔥 MAIN EVENT PAGE */}
+<EventPage title="Exhibitions" img={exhibition} description={description} />
 
       {/* 💎 KEY HIGHLIGHTS */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">

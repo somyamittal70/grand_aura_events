@@ -1,5 +1,6 @@
 import React from "react";
 import EventPage from "./EventPage";
+<<<<<<< HEAD
 import img from "../../assets/GalaDinner.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -10,6 +11,18 @@ import img3 from "../../assets/livedj.png";
 import img4 from "../../assets/livedj.png";
 import img5 from "../../assets/livedj.png";
 import img6 from "../../assets/livedj.png";
+=======
+import conference from "../../assets/conference.jpeg";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Divider from "../home/Divider";
+import img1 from "../../assets/conf1.webp";
+import img2 from "../../assets/conf2.webp";
+import img3 from "../../assets/conf3.webp";
+import img4 from "../../assets/conf4.webp";
+import img5 from "../../assets/conf5.webp";
+import img6 from "../../assets/conf6.webp";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function Conferences() {
   const description = `
@@ -21,7 +34,11 @@ Whether you’re hosting a customer-focused user conference or an internal summi
   return (
     <div className="bg-[#0B1D3A] text-white">
       {/* 🔥 MAIN EVENT PAGE */}
+<<<<<<< HEAD
       <EventPage title="Conferences" img={img} description={description} />
+=======
+      <EventPage title="Conferences" img={conference} description={description} />
+>>>>>>> fe4c9d8 (Updated project)
 
       {/* 💎 KEY HIGHLIGHTS */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">

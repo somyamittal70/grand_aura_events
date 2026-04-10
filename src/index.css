@@ -1,4 +1,6 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   scroll-behavior: smooth;
@@ -223,5 +225,9 @@ body {
   to {
     background-position: 200% center;
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> fe4c9d8 (Updated project)

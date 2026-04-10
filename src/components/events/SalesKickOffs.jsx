@@ -1,5 +1,6 @@
 import React from "react";
 import EventPage from "./EventPage";
+<<<<<<< HEAD
 import img from "../../assets/GalaDinner.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -10,6 +11,18 @@ import img3 from "../../assets/livedj.png";
 import img4 from "../../assets/livedj.png";
 import img5 from "../../assets/livedj.png";
 import img6 from "../../assets/livedj.png";
+=======
+import sales from "../../assets/sales.jpeg";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Divider from "../home/Divider";
+import img1 from "../../assets/kick1.webp";
+import img2 from "../../assets/kick2.webp";
+import img3 from "../../assets/kick3.webp";
+import img4 from "../../assets/kick4.webp";
+import img5 from "../../assets/kick5.webp";
+import img6 from "../../assets/kick6.webp";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function Sales() {
   const description = `
@@ -19,7 +32,11 @@ At GrandAura, we design impactful sales kick-off events that energize teams, ali
   return (
     <div className="bg-[#0B1D3A] text-white">
       {/* 🔥 MAIN */}
+<<<<<<< HEAD
       <EventPage title="Sales Kick-Offs" img={img} description={description} />
+=======
+      <EventPage title="Sales Kick-Offs" img={sales} description={description} />
+>>>>>>> fe4c9d8 (Updated project)
 
       {/* 💎 KEY HIGHLIGHTS */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">

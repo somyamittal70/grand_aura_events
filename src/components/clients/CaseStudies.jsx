@@ -3,7 +3,11 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import ClientPage from "./ClientPage";
 import Divider from "../home/Divider";
+<<<<<<< HEAD
 import img from "../../assets/comedy.png";
+=======
+import img from "../../assets/case.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 import img1 from "../../assets/cultural.png";
 import img2 from "../../assets/cultural.png";
 import img3 from "../../assets/cultural.png";

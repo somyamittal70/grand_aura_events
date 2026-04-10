@@ -51,6 +51,8 @@ export default function Header() {
         },
       ],
     },
+    
+    { name: "Our Gallery", path: "/our-gallery" },
 
     {
       name: "Clients",
@@ -60,6 +62,17 @@ export default function Header() {
       ],
     },
 
+<<<<<<< HEAD
+    {
+      name: "Clients",
+      dropdown: [
+        { name: "Health Care", path: "/clients/healthcare" },
+        { name: "Case Studies", path: "/clients/casestudies" },
+      ],
+    },
+
+=======
+>>>>>>> fe4c9d8 (Updated project)
     { name: "Contact", path: "/contact" },
     { name: "What We Offer", path: "/offer" },
   ];

@@ -9,11 +9,19 @@ export default function EventPage({ title, img, description }) {
     <div className="bg-[#0B1D3A] text-white">
       {/* Hero Section */}
       <div
+<<<<<<< HEAD
         className="h-[450px] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${img})` }}
       >
         <div className=" px-10 py-6 mt-10 rounded-xl">
           <h1 className="text-5xl font-bold">{title}</h1>
+=======
+        className="h-[550px] bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${img})`, opacity: 0.9 }}
+      >
+        <div className=" px-10 py-6 mt-5 rounded-xl">
+          <h1 className="text-6xl font-bold">{title}</h1>
+>>>>>>> fe4c9d8 (Updated project)
         </div>
       </div>
 

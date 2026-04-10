@@ -3,21 +3,37 @@ import { motion } from "framer-motion";
 import Divider from "../home/Divider";
 
 import serviceVideo from "../../assets/services-video.mp4"; // video path
+<<<<<<< HEAD
 import s5 from "../../assets/s5.jpg";
 import s6 from "../../assets/s6.jpg";
 import s7 from "../../assets/s7.jpg";
 import s1 from "../../assets/s1.jpg";
+=======
+import s5 from "../../assets/wed1.jpeg";
+import s6 from "../../assets/wed2.jpeg";
+import s7 from "../../assets/wed3.jpeg";
+import s1 from "../../assets/wed4.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 import service1 from "../../assets/service1.png";
 import service2 from "../../assets/service2.jpg";
 import service3 from "../../assets/service3.png";
 import service4 from "../../assets/service4.jpg";
 import service5 from "../../assets/service5.png";
 import service6 from "../../assets/service6.png";
+<<<<<<< HEAD
 import img1 from "../../assets/wedding1.png";
 import img3 from "../../assets/wedding3.png";
 import img5 from "../../assets/wedding5.png";
 import img7 from "../../assets/wedding7.jpg";
 import img9 from "../../assets/wedding9.jpg";
+=======
+import img1 from "../../assets/wed1.jpeg";
+import img3 from "../../assets/wed2.jpeg";
+import img5 from "../../assets/wed3.jpeg";
+import img7 from "../../assets/wed4.jpeg";
+import img9 from "../../assets/wed5.jpeg";
+import img11 from "../../assets/wed6.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function ServicesOverview() {
   return (
@@ -541,6 +557,85 @@ export default function ServicesOverview() {
       </section>
 
       <Divider />
+<<<<<<< HEAD
+=======
+
+      <section className="bg-[#0B1D3A] py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-20">
+        <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 md:gap-16 items-center">
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, x: -120 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center md:text-left"
+          >
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3">
+              Tours & Travels Planning
+            </h2>
+
+            <p className="text-white font-semibold mb-4 text-sm sm:text-base md:text-lg">
+              Seamless travel experiences designed for comfort, exploration, and
+              memorable journeys
+            </p>
+
+            <p className="text-white leading-6 sm:leading-7 mb-6 text-xs sm:text-sm">
+              We plan and manage complete travel experiences including
+              destination selection, accommodation, transportation, and guided
+              activities. Whether it’s corporate travel, group tours, or
+              incentive trips, our goal is to make every journey smooth,
+              enjoyable, and perfectly organized from start to finish.
+            </p>
+
+            <h3 className="text-lg sm:text-xl md:text-3xl font-semibold text-white mb-3">
+              Highlights
+            </h3>
+
+            <hr className="mb-5 text-[#CFAF4B]" />
+
+            <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base md:text-lg text-white list-disc pl-5">
+              {[
+                "Customized travel itineraries",
+                "Hotel & accommodation planning",
+                "Airport transfers & transport management",
+                "Group tours & corporate travel solutions",
+                "On-ground coordination & travel assistance",
+              ].map((item, i) => (
+                <motion.li
+                  key={i}
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.15 }}
+                >
+                  {item}
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* RIGHT SIDE IMAGES */}
+          <div className="relative flex justify-center items-center">
+            <div className="gold-shimmer-border p-[4px] sm:p-[6px] rounded-[30px] sm:rounded-[50px] md:rounded-[66px]">
+              <motion.img
+                src={img11}
+                initial={{ opacity: 0, rotate: -8, scale: 0.9 }}
+                whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
+                transition={{ duration: 3, ease: "easeOut" }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: 1,
+                  boxShadow: "0px 0px 60px rgba(207,175,75,0.6)",
+                }}
+                className="w-[260px] sm:w-[320px] md:w-[430px] 
+          h-[320px] sm:h-[380px] md:h-[490px] 
+          object-cover rounded-[25px] sm:rounded-[40px] md:rounded-[60px]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+>>>>>>> fe4c9d8 (Updated project)
     </>
   );
 }

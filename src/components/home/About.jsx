@@ -1,11 +1,11 @@
 import React from "react";
-import { Gift } from "lucide-react";
-import about1 from "../../assets/better.jpg";
-import about2 from "../../assets/together.jpg";
+import { motion } from "framer-motion";
+import about1 from "../../assets/a1.jpeg";
 import { Link } from "react-router-dom";
 
 export default function About() {
   return (
+<<<<<<< HEAD
     <section className="bg-[#0B1D3A] py-16 sm:py-20 md:py-30 px-4 sm:px-6 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10 md:gap-16 mb-20">
         {/* LEFT SIDE IMAGES */}
@@ -68,10 +68,81 @@ export default function About() {
 
           <Link to="/about">
             <button className="gold-shimmer text-white px-5 sm:px-6 md:px-7 py-2 sm:py-3 rounded-full text-sm sm:text-base font-semibold transition transform hover:scale-105 hover:bg-[#a18633] duration-300">
+=======
+    <section className="bg-[#0B1D3A] py-20 md:py-28 px-4 sm:px-6 md:px-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-14 md:gap-20">
+        {/* ================= LEFT EDITORIAL IMAGE DESIGN ================= */}
+        <div className="flex justify-center md:justify-start">
+          <motion.div
+            initial={{ opacity: 0, y: 60, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="relative"
+          >
+            {/* GOLD SHIMMER FRAME */}
+            <div className="gold-shimmer p-[3px] rounded-[30px]">
+              {/* IMAGE CONTAINER */}
+              <div className="relative overflow-hidden rounded-[28px] bg-[#0B1D3A]">
+                <motion.img
+                  src={about1}
+                  alt="event"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                  className="
+            w-[300px] sm:w-[360px] md:w-[420px]
+            h-[420px] sm:h-[480px] md:h-[520px]
+            object-cover
+            hover:shadow-[0_30px_80px_rgba(212,175,55,0.35)]
+          "
+                />
+
+                {/* Luxury Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* ================= RIGHT CONTENT ================= */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="max-w-xl md:max-w-2xl text-center md:text-left mx-auto md:mx-0"
+        >
+          <p className="gold-shimmer-text font-semibold text-sm sm:text-base md:text-lg mb-3 tracking-wide">
+            About Us
+          </p>
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white leading-tight mb-6">
+            Professional Planning,
+            <span className="block gold-shimmer-text">Grand Execution</span>
+          </h2>
+
+          <p className="text-sm sm:text-base text-white/80 leading-7 mb-6">
+            At GrandAura Events, we believe every celebration deserves elegance
+            and perfection. From intimate gatherings to large-scale corporate
+            functions, we craft seamless and unforgettable experiences with
+            creativity and precision.
+          </p>
+
+          <p className="text-sm sm:text-base text-white/80 leading-7 mb-10">
+            Our expert team blends event design, logistics, and hospitality to
+            deliver flawless execution and exceptional service that leaves a
+            lasting impression.
+          </p>
+
+          <Link to="/about">
+            <button className="gold-shimmer text-white px-7 py-3 rounded-full font-semibold transition duration-300 hover:scale-105 shadow-lg">
+>>>>>>> fe4c9d8 (Updated project)
               More Info
             </button>
           </Link>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

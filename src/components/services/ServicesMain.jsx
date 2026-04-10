@@ -1,12 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Divider from "../../components/home/Divider";
+<<<<<<< HEAD
 import img1 from "../../assets/wedding9.jpg";
 import img2 from "../../assets/wedding10.png";
 import img3 from "../../assets/wedding11.jpeg";
 import img4 from "../../assets/wedding12.png";
 import img5 from "../../assets/wedding13.png";
 import img6 from "../../assets/wedding14.png";
+=======
+import img1 from "../../assets/wed1.jpeg";
+import img2 from "../../assets/wed2.jpeg";
+import img3 from "../../assets/wed3.jpeg";
+import img4 from "../../assets/wed4.jpeg";
+import img5 from "../../assets/wed5.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 import { motion } from "framer-motion";
 
 const services = [

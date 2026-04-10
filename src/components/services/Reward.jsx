@@ -7,6 +7,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Divider from "../home/Divider";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+=======
+import img1 from "../../assets/rewardrecog.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 import s1 from "../../assets/band.png";
 import s2 from "../../assets/livedj.png";
 import s3 from "../../assets/soloartist.png";
@@ -45,7 +49,11 @@ export default function Reward() {
       <section className="relative h-[260px] sm:h-[320px] md:h-[420px] lg:h-[500px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <img
+<<<<<<< HEAD
           src={img}
+=======
+          src={img1}
+>>>>>>> fe4c9d8 (Updated project)
           alt="event"
           className="absolute w-full h-full object-cover"
         />

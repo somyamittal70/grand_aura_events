@@ -7,6 +7,10 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Divider from "../home/Divider";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+=======
+import img5 from "../../assets/entertain.jpeg";
+>>>>>>> fe4c9d8 (Updated project)
 import s1 from "../../assets/band.png";
 import s2 from "../../assets/livedj.png";
 import s3 from "../../assets/soloartist.png";
@@ -45,7 +49,11 @@ export default function EntertainOpt() {
       <section className="relative h-[300px] sm:h-[400px] md:h-[500px] flex items-center justify-center px-4 overflow-hidden">
         {/* Background Image */}
         <img
+<<<<<<< HEAD
           src={img}
+=======
+          src={img5}
+>>>>>>> fe4c9d8 (Updated project)
           alt="event"
           className="absolute w-full h-full object-cover"
         />

@@ -1,5 +1,6 @@
 import React from "react";
 import EventPage from "./EventPage";
+<<<<<<< HEAD
 import img from "../../assets/GalaDinner.jpeg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -10,6 +11,18 @@ import img3 from "../../assets/livedj.png";
 import img4 from "../../assets/livedj.png";
 import img5 from "../../assets/livedj.png";
 import img6 from "../../assets/livedj.png";
+=======
+import product from "../../assets/product.jpeg";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Divider from "../home/Divider";
+import img1 from "../../assets/pro1.webp";
+import img2 from "../../assets/pro2.webp";
+import img3 from "../../assets/pro3.webp";
+import img4 from "../../assets/pro4.webp";
+import img5 from "../../assets/pro5.webp";
+import img6 from "../../assets/pro6.webp";
+>>>>>>> fe4c9d8 (Updated project)
 
 export default function ProductLaunch() {
   const description = `
@@ -19,7 +32,11 @@ At GrandAura, we create impactful product launch events that captivate audiences
   return (
     <div className="bg-[#0B1D3A] text-white">
       {/* 🔥 MAIN */}
+<<<<<<< HEAD
       <EventPage title="Product Launch" img={img} description={description} />
+=======
+      <EventPage title="Product Launch" img={product} description={description} />
+>>>>>>> fe4c9d8 (Updated project)
 
       {/* 💎 KEY HIGHLIGHTS */}
       <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 md:px-10">
